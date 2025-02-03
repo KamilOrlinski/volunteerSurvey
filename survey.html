@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolontariat Ankieta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            color: #212529;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Krótka ankieta o wolontariacie 💡</h2>
+        <p>Odpowiedz na kilka pytań!</p>
+        <form id="quizForm">
+            <label>
+                Czy kiedykolwiek brałaś udział w wolontariacie?<br>
+                <input type="radio" name="volunteer" value="yes"> Tak<br>
+                <input type="radio" name="volunteer" value="no"> Nie<br>
+            </label><br><br>
+            <label>
+                Jaki rodzaj wolontariatu najbardziej Cię interesuje?<br>
+                <input type="radio" name="type" value="animals"> Pomoc zwierzętom<br>
+                <input type="radio" name="type" value="children"> Pomoc dzieciom<br>
+                <input type="radio" name="type" value="environment"> Ochrona środowiska<br>
+                <input type="text" name="type"> Inny (jaki?)<br>
+            </label><br><br>
+            <label>
+                Czy uważasz, że wolontariat jest ważny dla społeczeństwa?<br>
+                <input type="radio" name="importance" value="yes"> Tak<br>
+                <input type="radio" name="importance" value="no"> Nie<br>
+                <input type="radio" name="importance" value="maybe"> Nie jestem pewna<br>
+            </label><br><br>
+            <label>
+                Jak często angażujesz się w działania charytatywne?<br>
+                <input type="radio" name="frequency" value="often"> Często<br>
+                <input type="radio" name="frequency" value="rarely"> Rzadko<br>
+                <input type="radio" name="frequency" value="never"> Nigdy<br>
+            </label><br><br>
+            <label>
+                Czy robisz coś 14-tego?<br>
+                <input type="radio" name="busy" value="yes"> Tak<br>
+                <input type="radio" name="busy" value="no"> Nie<br>
+                <input type="radio" name="busy" value="dontknow"> Jeszcze nie wiem<br>
+            </label><br><br>
+            <label>
+                Czy brałaś udział w zbiórkach żywności lub odzieży?<br>
+                <input type="radio" name="collections" value="yes"> Tak<br>
+                <input type="radio" name="collections" value="no"> Nie<br>
+                <input type="radio" name="collections" value="plan"> Planuję to zrobić<br>
+            </label><br><br>
+            <label>
+                Czy uważasz, że wolontariat może pomóc w rozwoju osobistym?<br>
+                <input type="radio" name="growth" value="yes"> Tak<br>
+                <input type="radio" name="growth" value="no"> Nie<br>
+                <input type="radio" name="growth" value="maybe"> Nie jestem pewna<br>
+            </label><br><br>
+            <label>
+                Jakie cechy powinien mieć idealny wolontariusz?<br>
+                <input type="radio" name="traits" value="empathetic"> Empatyczny<br>
+                <input type="radio" name="traits" value="determined"> Zdeterminowany<br>
+                <input type="radio" name="traits" value="organized"> Zorganizowany<br>
+                <input type="text" name="traits"> Inne (jakie?)<br>
+            </label><br><br>
+            <label>
+                Czy poleciłabyś wolontariat swoim znajomym?<br>
+                <input type="radio" name="recommend" value="yes"> Tak<br>
+                <input type="radio" name="recommend" value="no"> Nie<br>
+                <input type="radio" name="recommend" value="maybe"> Może<br>
+            </label><br><br>
+            <label>
+                Czy chcesz iść ze mną na randkę w walentynki? 😊<br>
+                <input type="radio" name="answer" value="yes"> Tak, oczywiście! 💕<br>
+                <input type="radio" name="answer" value="maybe"> Może... 🤔<br>
+                <input type="radio" name="answer" value="no"> Nie 😢<br>
+            </label><br><br>
+            <button type="button" onclick="submitQuiz()">Wyślij</button>
+        </form>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                if (selectedAnswer.value === "yes") {
+                    window.location.href = "zaproszenie.html";
+                } else {
+                    alert("Hmm... czekaj czekaj tylko 'Tak, oczywiście!' jest akceptowalne! 😄");
+                }
+            } else {
+                alert("Wybierz odpowiedź przed wysłaniem!");
+            }
+        }
+    </script>
+</body>
+</html>
